@@ -1,109 +1,115 @@
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
+import { Link, useLocation } from "react-router-dom";
 
 function Nav() {
-  const [navItems, setNavItems] = useState("Abbout");
+  const location = useLocation();
+  const navRefs = {
+    About: useRef(null),
+    Contact: useRef(null),
+    Talks: useRef(null),
+    Projects: useRef(null),
+    Reviews: useRef(null),
+  };
+
+  // this part is to Match the route to active nav item
+  const pathToNav = {
+    "/": "About",
+    "/about": "About",
+    "/contact": "Contact",
+    "/talks": "Talks",
+    "/projects": "Projects",
+    "/reviews": "Reviews",
+  };
+
+  const activeFromPath = pathToNav[location.pathname] || "About";
+  const [navItems, setNavItems] = useState(activeFromPath);
+  const [hoveredItem, setHoveredItem] = useState(null);
+  const [underlineStyle, setUnderlineStyle] = useState({ left: 0, width: 0 });
+
+  const currentItem = hoveredItem || navItems;
+
+  useEffect(() => {
+    const ref = navRefs[currentItem]?.current;
+    if (ref) {
+      const { offsetLeft, offsetWidth } = ref;
+      setUnderlineStyle({ left: offsetLeft, width: offsetWidth });
+    }
+  }, [currentItem]);
 
   return (
-    <div onMouseLeave={() => setNavItems("About")} className="max-w-1200px ">
-      <nav className="flex gap-100 items-center bg-blue-500 p-3 text-white ">
-        <div className="flex gap-9 ">
-          <a href="#">
-            {" "}
-            <img src="/facebook.png" alt="" className="w-[40px]" />
-          </a>
-          <a href="#">
-            {" "}
-            <img
-              src="/linkedln.png"
-              alt=""
-              className="w-[30px] h-[24px] mt-2"
-            />
-          </a>
-          <a href="#">
-            {" "}
-            <img
-              src="/whatsapp.png"
-              alt=""
-              className="w-[30px] h-[24px] mt-2"
-            />
-          </a>
-          <a href="#">
-            {" "}
-            <img src="/twitter.png" alt="" className="w-[30px] h-[24px] mt-2" />
-          </a>
+    <div onMouseLeave={() => setHoveredItem(null)} className="">
+      <nav className="flex gap-100 items-center bg-blue-500 p-3 text-white relative">
+        <div className="flex gap-9">
+          <a href="#"><img src="/facebook.png" alt="" className="w-[40px]" /></a>
+          <a href="#"><img src="/linkedln.png" alt="" className="w-[30px] h-[24px] mt-2" /></a>
+          <a href="#"><img src="/whatsapp.png" alt="" className="w-[30px] h-[24px] mt-2" /></a>
+          <a href="#"><img src="/twitter.png" alt="" className="w-[30px] h-[24px] mt-2" /></a>
         </div>
 
-        <div className=" text-white text-[20px] font-semibold ">
-          <ul className="flex gap-9">
+        <div className="text-white text-[20px] font-semibold relative">
+          <span
+            className="absolute bottom-0 h-1 bg-white transition-all duration-300"
+            style={{
+              left: underlineStyle.left,
+              width: underlineStyle.width,
+            }}
+          ></span>
+
+          <ul className="flex gap-9 relative">
             <li>
-              <a
-                href="/About"
-                onMouseLeave={() => setNavItems("About")}
-                className={`relative group text-white px-2 py-1 transition-colors duration-300`}
+              <Link
+                to="/"
+                ref={navRefs.About}
+                onMouseEnter={() => setHoveredItem("About")}
+                onClick={() => setNavItems("About")}
+                className="relative px-2 py-1"
               >
                 ABOUT
-                <span
-                  className={`absolute left-0 -bottom-1 h-1 bg-white transition-all duration-300 ${
-                    navItems === "About" ? "w-full" : "w-0"
-                  } group-hover:w-full`}
-                ></span>
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href=""
-                onMouseEnter={() => setNavItems("Contact")}
-                className={`relative group text-white px-2 py-1 transition-colors duration-300`}
+              <Link
+                to="/contact"
+                ref={navRefs.Contact}
+                onMouseEnter={() => setHoveredItem("Contact")}
+                onClick={() => setNavItems("Contact")}
+                className="relative px-2 py-1"
               >
                 CONTACT
-                <span
-                  className={`absolute left-0 -bottom-1 h-1 bg-white transition-all duration-300 ${
-                    navItems === "Contact" ? "w-full" : "w-0"
-                  } group-hover:w-full`}
-                ></span>
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href=""
-                onMouseEnter={() => setNavItems("Talks")}
-                className={`relative group text-white px-2 py-1 transition-colors duration-300`}
+              <Link
+                to="/talks"
+                ref={navRefs.Talks}
+                onMouseEnter={() => setHoveredItem("Talks")}
+                onClick={() => setNavItems("Talks")}
+                className="relative px-2 py-1"
               >
                 TALKS
-                <span
-                  className={`absolute left-0 -bottom-1 h-1 bg-white transition-all duration-300 ${
-                    navItems === "Talks" ? "w-full" : "w-0"
-                  } group-hover:w-full`}
-                ></span>
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href=""
-                onMouseEnter={() => setNavItems("Projects")}
-                className={`relative group text-white px-2 py-1 transition-colors duration-300`}
+              <Link
+                to="/projects"
+                ref={navRefs.Projects}
+                onMouseEnter={() => setHoveredItem("Projects")}
+                onClick={() => setNavItems("Projects")}
+                className="relative px-2 py-1"
               >
                 PROJECTS
-                <span
-                  className={`absolute left-0 -bottom-1 h-1 bg-white transition-all duration-300 ${
-                    navItems === "Projects" ? "w-full" : "w-0"
-                  } group-hover:w-full`}
-                ></span>
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href=""
-                onMouseEnter={() => setNavItems("Reviews")}
-                className={`relative group text-white px-1 py-1 transition-colors duration-300`}
+              <Link
+                to="/reviews"
+                ref={navRefs.Reviews}
+                onMouseEnter={() => setHoveredItem("Reviews")}
+                onClick={() => setNavItems("Reviews")}
+                className="relative px-2 py-1"
               >
                 REVIEWS
-                <span
-                  className={`absolute left-0 -bottom-1 h-1 bg-white transition-all duration-300 ${
-                    navItems === "Reviews" ? "w-full" : "w-0"
-                  } group-hover:w-full`}
-                ></span>
-              </a>
+              </Link>
             </li>
           </ul>
         </div>

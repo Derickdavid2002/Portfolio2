@@ -1,5 +1,4 @@
 import Marquee from "react-fast-marquee";
-import { FaCode, FaCheckCircle } from "react-icons/fa";
 
 function Section() {
   const ocube = ["Html&Css&JS"];
@@ -35,36 +34,52 @@ function Section() {
               </div>
             </div>
           </div>
+          <div className="flex items-center justify-center mt-10">
+            <button className="  text-white font-bold px-4 py-2 rounded  bg-indigo-500 hover:bg-indigo-700 transition mt-3 mb-5">
+              <a href="/projects">View all project</a>
+            </button>
+          </div>
         </section>
 
         <section className="bg-blue-400 text-white p-6 mt-15">
+          <div className="flex items-center justify-center ">
+            <img src="/me.png" alt="" className=" w-20 h-20 rounded-full " />
+          </div>
 
-<div className="flex items-center justify-center ">
-  <img src="/me.png" alt="" className=" w-20 h-20 rounded-full "/>
-</div>
+          <div className="text-center mt-4 text-3xl  text-white font-semibold flex items-center justify-center">
+            <p>Interested In Hiring Me For Your Project?</p>
+          </div>
 
-<div className="text-center mt-4 text-3xl  text-white font-semibold flex items-center justify-center">
-  <p>Interested In Hiring Me For Your Project?</p>
-</div>
-
-<div className="flex items-center justify-center mt-2 text-white">
-  <p>Looking for an experienced frontend developer to build your responsible website ? To start <br /> an initial chat, just drop me an email at dderick249@gmail.com or use the form on the contact page.</p>
-</div>
-<div className="flex  justify-center">
- <button className=" px-4 py-2 rounded  bg-indigo-500 hover:bg-indigo-700 transition mt-2">
-            Let's Talk
-          </button>
-</div>
+          <div className="flex items-center justify-center mt-2 text-white">
+            <p>
+              Looking for an experienced frontend developer to build your
+              responsible website ? To start <br /> an initial chat, just drop
+              me an email at{" "}
+              <a href="" className="text-gray-600 hover:underline">
+                {" "}
+                dderick249@gmail.com
+              </a>{" "}
+              or use the{" "}
+              <a href="/contact" className="text-gray-600 hover:underline">
+                form on the contact page
+              </a>
+              .
+            </p>
+          </div>
+          <div className="flex  justify-center">
+            <button className=" text-white font-bold px-4 py-2 rounded  bg-indigo-500 hover:bg-indigo-700 transition mt-3 mb-5">
+<a href="/contact">Let's Talk</a>
+            </button>
+          </div>
         </section>
 
-
         <footer>
-
-
-          <p className="text-sm flex items-center justify-center bg-gray-500 text-gray-400 py-3">@ 2025 Derick David</p>
+          <p className="text-sm flex items-center justify-center bg-gray-500 text-gray-400 py-3">
+            @ 2025 Derick David
+          </p>
         </footer>
       </div>
-    </div> 
+    </div>
   );
 }
 

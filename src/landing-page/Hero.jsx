@@ -24,8 +24,8 @@ function Hero() {
             conferences and meetups. <br /> Want to know how I may help your
             project? Check out my project case studies and resume.
           </p>
-          <button className="px-4 py-2 rounded  bg-indigo-500 hover:bg-indigo-700 transition mt-2">
-            Hire Me
+          <button className="px-4 py-2 rounded text-white font-bold bg-indigo-500 hover:bg-indigo-700 transition mt-2">
+            <a href="/contact">Hire Me</a>
           </button>
         </div>
       </div>

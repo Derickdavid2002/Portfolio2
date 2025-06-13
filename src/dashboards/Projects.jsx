@@ -1,18 +1,34 @@
+import Nav from "../landing-page/Nav";
+
+
+
 
 
 function Projects() {
   return (
-    <div className="about">
-      <h2>About Us</h2>
-      <p>
-        We are a team of passionate developers dedicated to creating innovative solutions that make a difference.
-        Our mission is to empower individuals and businesses with cutting-edge technology.
-      </p>
-      <p>
-        With years of experience in the industry, we pride ourselves on delivering high-quality products and exceptional customer service.
-        Join us on our journey to transform the digital landscape!
-      </p>
+    <div>
+<div>
+      <Nav />
+</div>
+      
+ <div className="flex items-center justify-center gap-10 mt-15">
+            <div className=" relative group overflow-hidden cursor-pointer bg-[url('/Newbg.png')] bg-cover bg-center  bg-white shadow-lg w-100 h-80 text-center rounded-lg p-6 hover:bg-amber-50 transition">
+              <div className="absolute inset-0 bg-blue-400/50 opacity-0 group-hover:opacity-100 flex items-center justify-center duration-300 transition"></div>
+            </div>
+
+            <div>
+              <div className=" relative group overflow-hidden cursor-pointer bg-[url('/blog.png')] bg-cover bg-center  bg-white shadow-lg w-100 h-80 text-center rounded-lg p-6 hover:bg-amber-50 transition">
+                <div className="absolute inset-0 bg-blue-400/50 opacity-0 group-hover:opacity-100 flex items-center justify-center duration-300 transition"></div>
+              </div>
+            </div>
+          </div>
+          <footer>
+          <p className="text-sm flex items-center justify-center bg-gray-500 text-gray-400 py-3 mt-25">
+            @ 2025 Derick David
+          </p>
+        </footer>
     </div>
+    
   );
 }
 

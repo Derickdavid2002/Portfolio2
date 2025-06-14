@@ -1,5 +1,9 @@
 import { useState, useEffect, useRef } from "react";
 import { Link, useLocation } from "react-router-dom";
+import Aos from "aos";
+import "aos/dist/aos.css";
+
+
 
 function Nav() {
   const location = useLocation();
@@ -11,14 +15,13 @@ function Nav() {
     Reviews: useRef(null),
   };
 
-  // this part is to Match the route to active nav item
   const pathToNav = {
     "/": "About",
     "/about": "About",
     "/contact": "Contact",
     "/talks": "Talks",
     "/projects": "Projects",
-    "/reviews": "Reviews",
+    "/blogs": "Blogs",
   };
 
   const activeFromPath = pathToNav[location.pathname] || "About";
@@ -27,6 +30,12 @@ function Nav() {
   const [underlineStyle, setUnderlineStyle] = useState({ left: 0, width: 0 });
 
   const currentItem = hoveredItem || navItems;
+
+
+  useEffect(() => {
+    Aos.init({ duration: 800, once: true });
+  }, []);
+
 
   useEffect(() => {
     const ref = navRefs[currentItem]?.current;
@@ -39,7 +48,7 @@ function Nav() {
   return (
     <div onMouseLeave={() => setHoveredItem(null)} className="">
       <nav className="flex gap-100 items-center bg-blue-500 p-3 text-white relative">
-        <div className="flex gap-9">
+        <div data-aos="fade-down" data-aos-delay="100" className="flex gap-9">
           <a href="#"><img src="/facebook.png" alt="" className="w-[40px]" /></a>
           <a href="#"><img src="/linkedln.png" alt="" className="w-[30px] h-[24px] mt-2" /></a>
           <a href="#"><img src="/whatsapp.png" alt="" className="w-[30px] h-[24px] mt-2" /></a>
@@ -102,13 +111,13 @@ function Nav() {
             </li>
             <li>
               <Link
-                to="/reviews"
+                to="/blogs"
                 ref={navRefs.Reviews}
                 onMouseEnter={() => setHoveredItem("Reviews")}
                 onClick={() => setNavItems("Reviews")}
                 className="relative px-2 py-1"
               >
-                REVIEWS
+                BLOGS
               </Link>
             </li>
           </ul>

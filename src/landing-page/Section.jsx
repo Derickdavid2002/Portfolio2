@@ -1,10 +1,10 @@
 import Marquee from "react-fast-marquee";
 
-function Section() {
+function Section({ aosProps }) {
   const ocube = ["Html&Css&JS"];
 
   return (
-    <div className="bg-gray-100">
+    <div {...aosProps}className="bg-gray-100">
       <div>
         <p className="flex items-center justify-center text-gray-500 mt-15 text-4xl font-semibold ">
           Great Clients I've Worked With

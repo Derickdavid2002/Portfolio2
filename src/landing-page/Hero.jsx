@@ -1,10 +1,10 @@
 import { FaCode, FaCheckCircle } from "react-icons/fa";
 
-function Hero() {
+function Hero( aosProps ) {
   const skills = ["React", "JavaScript", "HTML", "CSS"];
   const learningSkills = ["Python", "C++", "Java", "Node.js"];
   return (
-    <div className="">
+    <div {...aosProps}className="">
       <div className="flex items-center gap-15 px-5 py-5 bg-blue-400 text-white">
         <div>
           <img
@@ -45,7 +45,7 @@ function Hero() {
       </div>
 
       <div className="flex items-center justify-center  gap-10 mt-15 ">
-        <div className=" bg-white shadow-md w-80 text-center rounded-lg p-6 hover:bg-amber-50 transition">
+        <div className=" bg-white shadow-md w-80 text-center rounded-lg p-6 hover:bg-blue-300/40 transition-transform hover:scale-105">
           <div className=" flex items-center justify-center mb-10">
             <div className="w-16 h-16 bg-blue-500 rounded-full flex items-center justify-center">
               <FaCode className="text-white text-2xl" />
@@ -70,7 +70,7 @@ function Hero() {
           </div>
         </div>
 
-        <div className=" bg-white shadow-md w-80 text-center rounded-lg p-6 hover:bg-amber-50 transition">
+        <div className=" bg-white shadow-md w-80 text-center rounded-lg p-6 hover:bg-blue-300/40 transition-transform hover:scale-105">
           <div className=" flex items-center justify-center mb-10">
             <div className="w-16 h-16 bg-blue-500 rounded-full flex items-center justify-center">
               <FaCode className="text-white text-2xl" />

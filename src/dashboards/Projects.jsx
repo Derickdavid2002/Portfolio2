@@ -1,36 +1,30 @@
 import Nav from "../landing-page/Nav";
 
-
-
-
-
-function Projects() {
+function Projects(aosProps) {
   return (
-    <div>
-<div>
-      <Nav />
-</div>
-      
- <div className="flex items-center justify-center gap-10 mt-15">
-            <div className=" relative group overflow-hidden cursor-pointer bg-[url('/Newbg.png')] bg-cover bg-center  bg-white shadow-lg w-100 h-80 text-center rounded-lg p-6 hover:bg-amber-50 transition">
-              <div className="absolute inset-0 bg-blue-400/50 opacity-0 group-hover:opacity-100 flex items-center justify-center duration-300 transition"></div>
-            </div>
+    <div {...aosProps}>
+      <div>
+        <Nav />
+      </div>
 
-            <div>
-              <div className=" relative group overflow-hidden cursor-pointer bg-[url('/blog.png')] bg-cover bg-center  bg-white shadow-lg w-100 h-80 text-center rounded-lg p-6 hover:bg-amber-50 transition">
-                <div className="absolute inset-0 bg-blue-400/50 opacity-0 group-hover:opacity-100 flex items-center justify-center duration-300 transition"></div>
-              </div>
-            </div>
+      <div className="flex items-center justify-center gap-10 mt-15">
+        <div className=" relative group overflow-hidden cursor-pointer bg-[url('/Newbg.png')] bg-cover bg-center  bg-white shadow-lg w-100 h-80 text-center rounded-lg p-6 hover:bg-amber-50  transition-transform hover:scale-105 ">
+          <div className="absolute inset-0 bg-blue-200/40 opacity-0 group-hover:opacity-100 flex items-center justify-center duration-300 transition"></div>
+        </div>
+
+        <div>
+          <div className=" relative group overflow-hidden cursor-pointer bg-[url('/blog.png')] bg-cover bg-center  bg-white shadow-lg w-100 h-80 text-center rounded-lg p-6 hover:bg-amber-50 transition-transform hover:scale-105">
+            <div className="absolute inset-0 bg-blue-200/40 opacity-0 group-hover:opacity-100 flex items-center justify-center duration-300 transition"></div>
           </div>
-          <footer>
-          <p className="text-sm flex items-center justify-center bg-gray-500 text-gray-400 py-3 mt-25">
-            @ 2025 Derick David
-          </p>
-        </footer>
+        </div>
+      </div>
+      <footer>
+        <p className="text-sm flex items-center justify-center bg-gray-500 text-gray-400 py-3 mt-25">
+          @ 2025 Derick David
+        </p>
+      </footer>
     </div>
-    
   );
 }
-
 
 export default Projects;

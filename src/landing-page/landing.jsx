@@ -1,12 +1,22 @@
 import Nav from "./Nav";
 import Hero from "./Hero";
 import Section from "./Section"
+
+
 function LandingPage() {
+
+const aosProps = () => {
+  return {
+    "data-aos": "fade-down",
+    "data-aos-delay": "40",
+  };
+};
+
   return (
-    <div>
+    <div >
       <Nav />
-     <Hero />
-     <Section />
+     <Hero {...aosProps()} />
+     <Section {...aosProps()}/>
     </div>
   );
 }

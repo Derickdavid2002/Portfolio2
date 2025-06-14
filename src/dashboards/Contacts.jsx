@@ -1,8 +1,13 @@
 import Nav from "../landing-page/Nav";
 
-function Contacts() {
+
+
+function Contacts( aosProps) {
+
+
+  
   return (
-    <div>
+    <div {...aosProps} >
       <div>
         <Nav />
       </div>

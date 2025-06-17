@@ -8,7 +8,7 @@ function Talks (aosProps) {
             <Nav />
          </div>
  <div className="bg-blue-400 p-10 ">
-        <p className=" text-white font-bold text-3xl">Talks</p>
+        <p className=" text-white font-bold flex justify-center lg:justify-start text-3xl">Talks</p>
 
         <p className="text-white mt-4  text-2xl">Want me to walk at your firm or projects? <a className="hover:underline text-gray-500"href="/contact">Get In Touch</a></p>
       </div>

@@ -13,7 +13,7 @@ function Contacts( aosProps) {
       </div>
 
       <div className="bg-blue-400 p-10 ">
-        <p className=" text-white font-bold text-3xl">Contacts</p>
+        <p className=" text-white flex justify-center lg:justify-start font-bold text-3xl">Contacts</p>
       </div>
       <div className="flex items-center justify-center mt-10">
         <img src="/me.png" alt="" className="rounded-full w-30 h-30" />

@@ -5,8 +5,8 @@ function Hero( aosProps ) {
   const learningSkills = ["Python", "C++", "Java", "Node.js"];
   return (
     <div {...aosProps}className="">
-      <div className="flex items-center flex-col lg:flex-row gap-15 px-5 py-5 bg-blue-400 text-white">
-        <div>
+      <div className="flex items-center justify-center flex-col lg:flex-row gap-15 px-5 py-5 bg-blue-400 text-white">
+        <div className="">
           <img
             src="/me.png"
             alt=""
@@ -14,7 +14,7 @@ function Hero( aosProps ) {
           />
         </div>
 
-        <div className="text-center lg:text-start">
+        <div className="text-center  lg:text-start">
           <p className="text-2xl">Hello, My Name Is</p>
           <p className="font-semibold text-4xl mt-2">Derick David</p>
           <p className="mt-2">

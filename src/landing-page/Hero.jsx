@@ -5,7 +5,7 @@ function Hero( aosProps ) {
   const learningSkills = ["Python", "C++", "Java", "Node.js"];
   return (
     <div {...aosProps}className="">
-      <div className="flex items-center gap-15 px-5 py-5 bg-blue-400 text-white">
+      <div className="flex items-center flex-col lg:flex-row gap-15 px-5 py-5 bg-blue-400 text-white">
         <div>
           <img
             src="/me.png"
@@ -14,7 +14,7 @@ function Hero( aosProps ) {
           />
         </div>
 
-        <div>
+        <div className="text-center lg:text-start">
           <p className="text-2xl">Hello, My Name Is</p>
           <p className="font-semibold text-4xl mt-2">Derick David</p>
           <p className="mt-2">
@@ -22,7 +22,7 @@ function Hero( aosProps ) {
             <br />
             about web development on my blog and regularly speak at various web
             conferences and meetups. <br /> Want to know how I may help your
-            project? Check out my project case studies and resume.
+            project? Check out my <a className="hover:underline text-gray-500" href="/projects">project case</a>.
           </p>
           <button className="px-4 py-2 rounded text-white font-bold bg-indigo-500 hover:bg-indigo-700 transition mt-2">
             <a href="/contact">Hire Me</a>
@@ -30,13 +30,13 @@ function Hero( aosProps ) {
         </div>
       </div>
 
-      <div className="mt-10">
+      <div className="mt-10 ">
         <div className="flex justify-center items-center">
           <p className="text-4xl text-gray-500 font-semibold ">
             Skills Overview
           </p>
         </div>
-        <p className="flex items-center justify-center text-gray-500 mt-4">
+        <p className="flex text-center lg:text-start items-center justify-center text-gray-500 mt-4">
           I have more than 8 years' experience building rich web applications
           for clients all over the world. Below is a <br />
           quick overview of my main technical skill sets and tools I use. Want
@@ -44,7 +44,7 @@ function Hero( aosProps ) {
         </p>
       </div>
 
-      <div className="flex items-center justify-center  gap-10 mt-15 ">
+      <div className="flex flex-col lg:flex-row items-center justify-center  gap-10 mt-15 ">
         <div className=" bg-white shadow-md w-80 text-center rounded-lg p-6 hover:bg-blue-300/40 transition-transform hover:scale-105">
           <div className=" flex items-center justify-center mb-10">
             <div className="w-16 h-16 bg-blue-500 rounded-full flex items-center justify-center">

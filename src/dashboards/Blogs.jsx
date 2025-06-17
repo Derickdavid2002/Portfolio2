@@ -6,18 +6,18 @@ function Blogs(aosProps) {
       <div>
         <Nav />
       </div>
-      <div className="flex items-center gap-15 px-5 py-5 bg-blue-400 text-white">
+      <div className="flex items-center flex-col lg:flex-row gap-15 px-5 py-5 bg-blue-400 text-white">
         <div>
           <img src="/me.png" alt="" className=" mt-10 c w-[300px] h-[300px]" />
         </div>
 
-        <div>
+        <div className="text-center lg:text-start">
           <p className="font-semibold text-4xl mt-2">Derick David's Blog </p>
           <p className="mt-2">
             I write about web development and responsive website. <br />
             You can follow me via the various channels below:
           </p>
-          <div className="flex gap-9 mt-5">
+          <div className="flex justify-center lg:justify-start gap-9 mt-5">
             <a href="#">
               <img src="/facebook.png" alt="" className="w-[40px]" />
             </a>
@@ -51,7 +51,7 @@ function Blogs(aosProps) {
         <img src="/me.png" alt="" className="rounded-full w-30 h-30" />
       </div>
 
-      <div className="flex items-center justify-center  p-7">
+      <div className="flex items-center justify-center text-center lg:text-start p-7">
         <div className="max-w-4xl w-full p-15 bg-white rounded-lg shadow-lg text-center">
           <p className="mb-6 ">
             I'm currently taking on freelance work. If you are interested in
@@ -67,27 +67,27 @@ function Blogs(aosProps) {
 
             <div className="flex items-center justify-center mt-4 gap-9">
               <a href="#">
-                <img src="/facebook.png" alt="" className="w-[40px] mt-1" />
+                <img src="/facebook.png" alt="" className="w-[50px] h-[24px] lg:w-[30px] lg:h-[24px] mt-1" />
               </a>
               <a href="#">
                 <img
                   src="/linkedln.png"
                   alt=""
-                  className="w-[30px] h-[24px] mt-2"
+                  className="w-[50px] h-[24px] lg:w-[30px] lg:h-[24px] mt-2"
                 />
               </a>
               <a href="#">
                 <img
                   src="/whatsapp.png"
                   alt=""
-                  className="w-[30px] h-[24px] mt-2"
+                  className="w-[50px] h-[24px] lg:w-[30px] lg:h-[24px] mt-2"
                 />
               </a>
               <a href="#">
                 <img
                   src="/twitter.png"
                   alt=""
-                  className="w-[30px] h-[24px] mt-2"
+                  className="w-[50px] h-[24px] lg:w-[30px] lg:h-[24px] mt-2"
                 />
               </a>
             </div>

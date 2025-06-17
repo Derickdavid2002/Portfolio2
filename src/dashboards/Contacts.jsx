@@ -70,7 +70,7 @@ function Contacts( aosProps) {
               Get In Touch
             </p>
             <form action="">
-              <div className="flex gap-3 mb-4 ">
+              <div className="flex gap-3 flex-col lg:flex-row mb-4 ">
                 <input
                   type="text"
                   id="name"

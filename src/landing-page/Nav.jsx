@@ -2,10 +2,12 @@ import { useState, useEffect, useRef } from "react";
 import { Link, useLocation } from "react-router-dom";
 import Aos from "aos";
 import "aos/dist/aos.css";
-
-
+import { RxHamburgerMenu } from "react-icons/rx";
+import MobileNav from "./MobileNav";
+import { TbLetterX } from "react-icons/tb";
 
 function Nav() {
+  const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
   const navRefs = {
     About: useRef(null),
@@ -31,11 +33,9 @@ function Nav() {
 
   const currentItem = hoveredItem || navItems;
 
-
   useEffect(() => {
     Aos.init({ duration: 800, once: true });
   }, []);
-
 
   useEffect(() => {
     const ref = navRefs[currentItem]?.current;
@@ -47,15 +47,35 @@ function Nav() {
 
   return (
     <div onMouseLeave={() => setHoveredItem(null)} className="">
-      <nav className="flex gap-100 items-center bg-blue-500 p-3 text-white relative">
+      <nav className="flex gap-100 items-center bg-blue-500 p-3 text-white relative flex-col md:flex-row md:justify-between md:gap-[100px]">
         <div data-aos="fade-down" data-aos-delay="100" className="flex gap-9">
-          <a href="#"><img src="/facebook.png" alt="" className="w-[40px]" /></a>
-          <a href="#"><img src="/linkedln.png" alt="" className="w-[30px] h-[24px] mt-2" /></a>
-          <a href="#"><img src="/whatsapp.png" alt="" className="w-[30px] h-[24px] mt-2" /></a>
-          <a href="#"><img src="/twitter.png" alt="" className="w-[30px] h-[24px] mt-2" /></a>
+          <a href="#">
+            <img src="/facebook.png" alt="" className="w-[40px]" />
+          </a>
+          <a href="#">
+            <img
+              src="/linkedln.png"
+              alt=""
+              className="w-[30px] h-[24px] mt-2"
+            />
+          </a>
+          <a href="#">
+            <img
+              src="/whatsapp.png"
+              alt=""
+              className="w-[30px] h-[24px] mt-2"
+            />
+          </a>
+          <a href="#">
+            <img src="/twitter.png" alt="" className="w-[30px] h-[24px] mt-2" />
+          </a>
+
+          <div className=" lg:hidden mt-3 " onClick={() => setIsOpen(!isOpen)}>
+            {isOpen ? <TbLetterX /> : <RxHamburgerMenu />}
+          </div>
         </div>
 
-        <div className="text-white text-[20px] font-semibold relative">
+        <div className="lg:text-white lg:text-[20px] lg:font-semibold relative hidden lg:block ">
           <span
             className="absolute bottom-0 h-1 bg-white transition-all duration-300"
             style={{
@@ -64,7 +84,7 @@ function Nav() {
             }}
           ></span>
 
-          <ul className="flex gap-9 relative">
+          <ul className="lg:flex lg:gap-9 hidden relative">
             <li>
               <Link
                 to="/"
@@ -123,6 +143,12 @@ function Nav() {
           </ul>
         </div>
       </nav>
+      <MobileNav
+        isOpen={isOpen}
+        setIsOpen={setIsOpen}
+        navItems={navItems}
+        setNavItems={setNavItems}
+      />
     </div>
   );
 }

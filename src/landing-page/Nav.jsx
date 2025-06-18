@@ -93,7 +93,7 @@ function Nav() {
                 onClick={() => setNavItems("About")}
                 className="relative px-2 py-1"
               >
-                ABOUT
+                HOME
               </Link>
             </li>
             <li>

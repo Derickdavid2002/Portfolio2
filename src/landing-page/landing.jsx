@@ -16,7 +16,7 @@ const aosProps = () => {
 };
 
   return (
-    <div >
+    <div className="max-w-[1400px] mx-auto " >
       <Nav />
      <Hero {...aosProps()} />
      <Section {...aosProps()}/>

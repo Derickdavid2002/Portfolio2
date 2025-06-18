@@ -4,7 +4,7 @@ function Section({ aosProps }) {
   const ocube = ["Html&Css&JS"];
 
   return (
-    <div {...aosProps}className="bg-gray-100">
+    <div {...aosProps}className="max-w-[1400px] mx-auto bg-gray-100">
       <div>
         <p className="flex text-center lg:text-start items-center justify-center text-gray-500 mt-15 text-4xl font-semibold ">
           Great Clients I've Worked With
@@ -50,7 +50,7 @@ function Section({ aosProps }) {
             <p>Interested In Hiring Me For Your Project?</p>
           </div>
 
-          <div className="flex text-center lg:text-start items-center justify-center mt-2 text-white">
+          <div className="flex text-center mt-5 px-4 lg:text-start items-center justify-center  text-white">
             <p>
               Looking for an experienced frontend developer to build your
               responsible website ? To start <br /> an initial chat, just drop

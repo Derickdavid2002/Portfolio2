@@ -46,9 +46,9 @@ function Nav() {
   }, [currentItem]);
 
   return (
-    <div onMouseLeave={() => setHoveredItem(null)} className="">
-      <nav className="flex gap-100 items-center bg-blue-500 p-3 text-white relative flex-col md:flex-row md:justify-between md:gap-[100px]">
-        <div data-aos="fade-down" data-aos-delay="100" className="flex gap-9">
+    <div onMouseLeave={() => setHoveredItem(null)} className=" ">
+      <nav className="flex lg:gap-100 items-center bg-blue-500 p-3 text-white relative flex-col md:flex-row md:justify-between md:gap-[100px]">
+        <div data-aos="fade-down" data-aos-delay="100" className="flex gap-7 lg:gap-9">
           <a href="#">
             <img src="/facebook.png" alt="" className="w-[40px]" />
           </a>
@@ -59,7 +59,7 @@ function Nav() {
               className="w-[30px] h-[24px] mt-2"
             />
           </a>
-          <a href="#">
+          <a href="https://wa.me/2349071622937">
             <img
               src="/whatsapp.png"
               alt=""
@@ -70,7 +70,7 @@ function Nav() {
             <img src="/twitter.png" alt="" className="w-[30px] h-[24px] mt-2" />
           </a>
 
-          <div className=" lg:hidden mt-3 " onClick={() => setIsOpen(!isOpen)}>
+          <div className=" lg:hidden mt-3   " onClick={() => setIsOpen(!isOpen)}>
             {isOpen ? <TbLetterX /> : <RxHamburgerMenu />}
           </div>
         </div>

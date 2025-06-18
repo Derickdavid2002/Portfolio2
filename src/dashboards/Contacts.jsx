@@ -20,8 +20,8 @@ function Contacts( aosProps) {
       </div>
 
       <div className="flex items-center justify-center  p-7">
-        <div className="max-w-4xl w-full p-15 bg-white rounded-lg shadow-lg text-center">
-          <p className="mb-6 ">
+        <div className="max-w-4xl w-full lg:p-15 bg-white rounded-lg shadow-lg text-center">
+          <p className="mb-6 px-4 py-4">
             I'm currently taking on freelance work. If you are interested in
             hiring me for your project <br /> please use the form below to get
             in touch. Want to know how I work and what I can offer? <br />
@@ -65,7 +65,7 @@ function Contacts( aosProps) {
 
       <section>
         <div className="flex items-center justify-center  p-7">
-          <div className="max-w-4xl w-full p-20 bg-white rounded-lg shadow-lg text-center">
+          <div className="max-w-4xl w-full lg:p-20 bg-white rounded-lg shadow-lg text-center">
             <p className="flex justify-center text-gray-500 items-center text-2xl font-bold mb-8">
               Get In Touch
             </p>
@@ -76,7 +76,7 @@ function Contacts( aosProps) {
                   id="name"
                   name="name"
                   placeholder="your name"
-                  className="mt-1 block w-full border border-gray-300 rounded-md  p-2 "
+                  className="mt-1 block w-full border border-gray-300 rounded-md  p-3 "
                 />
 
                 <input
@@ -84,7 +84,7 @@ function Contacts( aosProps) {
                   id="email"
                   name="email"
                   placeholder="youremail@gmail.com"
-                  className="mt-1 block w-full border border-gray-300 rounded-md p-2 "
+                  className="mt-1 block  w-full border border-gray-300 rounded-md  p-3 "
                 />
               </div>
 
@@ -94,7 +94,7 @@ function Contacts( aosProps) {
                   id="enter message"
                   name="enter message"
                   placeholder="enter your message"
-                  className="mt-1 block w-full h-50 border border-gray-300 rounded-md p-2  "
+                  className="mt-1 block w-full h-50 border border-gray-300 rounded-md p-3  "
                 />
 
                 <button className="py-3 px-4 w-full bg-blue-400 rounded-md mt-2 text-white font-semibold">

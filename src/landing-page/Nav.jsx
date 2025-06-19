@@ -60,7 +60,7 @@ function Nav() {
 
           <div className=" md:hidden    " onClick={() => setIsOpen(!isOpen)}>
             {isOpen ? (
-              <TbLetterX size={28} className="text-white" />
+              <TbLetterX  />
             ) : (
               <RxHamburgerMenu />
             )}

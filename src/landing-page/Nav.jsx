@@ -10,23 +10,23 @@ function Nav() {
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
   const navRefs = {
-    About: useRef(null),
+    Home: useRef(null),
     Contact: useRef(null),
-    Talks: useRef(null),
+    About: useRef(null),
     Projects: useRef(null),
     Reviews: useRef(null),
   };
 
   const pathToNav = {
-    "/": "About",
+    "/": "Home",
     "/about": "About",
     "/contact": "Contact",
-    "/talks": "Talks",
+
     "/projects": "Projects",
     "/blogs": "Blogs",
   };
 
-  const activeFromPath = pathToNav[location.pathname] || "About";
+  const activeFromPath = pathToNav[location.pathname] || "Home";
   const [navItems, setNavItems] = useState(activeFromPath);
   const [hoveredItem, setHoveredItem] = useState(null);
   const [underlineStyle, setUnderlineStyle] = useState({ left: 0, width: 0 });
@@ -46,98 +46,82 @@ function Nav() {
   }, [currentItem]);
 
   return (
-    <div onMouseLeave={() => setHoveredItem(null)} className=" ">
-      <nav className="flex lg:gap-100 items-center bg-blue-500 p-3 text-white relative flex-col md:flex-row md:justify-between md:gap-[100px]">
-        <div data-aos="fade-down" data-aos-delay="100" className="flex gap-7 lg:gap-9">
-          <a href="#">
-            <img src="/facebook.png" alt="" className="w-[40px]" />
-          </a>
-          <a href="#">
-            <img
-              src="/linkedln.png"
-              alt=""
-              className="w-[30px] h-[24px] mt-2"
-            />
-          </a>
-          <a href="https://wa.me/2349071622937">
-            <img
-              src="/whatsapp.png"
-              alt=""
-              className="w-[30px] h-[24px] mt-2"
-            />
-          </a>
-          <a href="#">
-            <img src="/twitter.png" alt="" className="w-[30px] h-[24px] mt-2" />
-          </a>
+    <div onMouseLeave={() => setHoveredItem(null)} className=" bg-gray-800 ">
+      <nav className="flex lg:gap- items-center p-3  py-6 text-white max-w-[1200px] mx-auto flex-col md:flex-row md:justify-between md:gap-[100px]">
+        <div
+          data-aos="fade-down"
+          data-aos-delay="100"
+          className="flex  items-center justify-between gap-30 "
+        >
+          <div className="text-2xl flex justify-start font-bold">
+            <span className="text-[#fafafa]">DER</span>
+            <span className="text-[#A855F7]">ICK</span>
+          </div>
 
-          <div className=" lg:hidden mt-3   " onClick={() => setIsOpen(!isOpen)}>
-            {isOpen ? <TbLetterX /> : <RxHamburgerMenu />}
+          <div className=" md:hidden    " onClick={() => setIsOpen(!isOpen)}>
+            {isOpen ? (
+              <TbLetterX size={28} className="text-white" />
+            ) : (
+              <RxHamburgerMenu />
+            )}
           </div>
         </div>
 
         <div className="lg:text-white lg:text-[20px] lg:font-semibold relative hidden lg:block ">
           <span
-            className="absolute bottom-0 h-1 bg-white transition-all duration-300"
+            className="absolute bottom-0 h-1 bg-[#A855F7] transition-all duration-300"
             style={{
               left: underlineStyle.left,
               width: underlineStyle.width,
             }}
           ></span>
 
-          <ul className="lg:flex lg:gap-9 hidden relative">
+          <ul className="lg:flex lg:space-x-7 text-lg font-medium hidden ">
             <li>
               <Link
                 to="/"
-                ref={navRefs.About}
-                onMouseEnter={() => setHoveredItem("About")}
-                onClick={() => setNavItems("About")}
-                className="relative px-2 py-1"
+                ref={navRefs.Home}
+                onMouseEnter={() => setHoveredItem("Home")}
+                onClick={() => setNavItems("Home")}
+                className="relative text-white px-2 font-bold hover:text-[#A855F7] py-1"
               >
                 HOME
               </Link>
             </li>
+
+            <li>
+              <Link
+                to="/about"
+                ref={navRefs.About}
+                onMouseEnter={() => setHoveredItem("About")}
+                onClick={() => setNavItems("About")}
+                className="relative text-white font-bold hover:text-[#A855F7] px-2 py-1"
+              >
+                ABOUT
+              </Link>
+            </li>
+
             <li>
               <Link
                 to="/contact"
                 ref={navRefs.Contact}
                 onMouseEnter={() => setHoveredItem("Contact")}
                 onClick={() => setNavItems("Contact")}
-                className="relative px-2 py-1"
+                className="relative text-white font-bold hover:text-[#A855F7] px-2 py-1"
               >
                 CONTACT
               </Link>
             </li>
-            <li>
-              <Link
-                to="/talks"
-                ref={navRefs.Talks}
-                onMouseEnter={() => setHoveredItem("Talks")}
-                onClick={() => setNavItems("Talks")}
-                className="relative px-2 py-1"
-              >
-                TALKS
-              </Link>
-            </li>
+
             <li>
               <Link
                 to="/projects"
                 ref={navRefs.Projects}
                 onMouseEnter={() => setHoveredItem("Projects")}
                 onClick={() => setNavItems("Projects")}
-                className="relative px-2 py-1"
+                className="relative  text-white font-bold hover:text-[#A855F7] px-2 py-1"
               >
                 PROJECTS
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="/blogs"
-                ref={navRefs.Reviews}
-                onMouseEnter={() => setHoveredItem("Reviews")}
-                onClick={() => setNavItems("Reviews")}
-                className="relative px-2 py-1"
-              >
-                BLOGS
               </Link>
             </li>
           </ul>

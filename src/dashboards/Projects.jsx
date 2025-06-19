@@ -1,3 +1,4 @@
+import Footer from "../landing-page/Footer";
 import Nav from "../landing-page/Nav";
 
 function Projects(aosProps) {
@@ -17,12 +18,18 @@ function Projects(aosProps) {
             <div className="absolute inset-0 bg-blue-200/40 opacity-0 group-hover:opacity-100 flex items-center justify-center duration-300 transition"></div>
           </div>
         </div>
+
+       
       </div>
-      <footer>
-        <p className="text-sm flex items-center justify-center bg-gray-500 text-gray-400 py-3 mt-25">
-          @ 2025 Derick David
-        </p>
-      </footer>
+<div className="flex items-center justify-center mt-10 mb-7">
+       <button className="px-4 py-2 rounded text-white font-bold bg-[#A855F7] hover:bg-indigo-700 transition ">
+            <a href="/contact">Hire Me</a>
+          </button>
+          </div>
+
+<div>
+  <Footer />
+</div>
     </div>
   );
 }

@@ -3,7 +3,7 @@ import { BrowserRouter, Route, Router } from "react-router-dom";
 import { Routes } from "react-router";
 import Projects from "./dashboards/Projects";
 import Contacts from "./dashboards/Contacts";
-import Talks from "./dashboards/Talks";
+import About from "./dashboards/About";
 import Blogs from "./dashboards/Blogs";
 import Aos from "aos";
 import "aos/dist/aos.css";
@@ -34,7 +34,7 @@ function App() {
           <Route path="/" element={<LandingPage />} />
           <Route path="projects" element={<Projects {...aosProps()} />} />
           <Route path="contact" element={<Contacts {...aosProps()} />} />
-          <Route path="talks" element={<Talks {...aosProps()} />} />
+          <Route path="about" element={<About {...aosProps()} />} />
           <Route path="blogs" element={<Blogs {...aosProps()}/>} />
         </Routes>
       </BrowserRouter>

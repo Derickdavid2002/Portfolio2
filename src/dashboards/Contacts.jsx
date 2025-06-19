@@ -1,22 +1,24 @@
 import Nav from "../landing-page/Nav";
+import Footer from "../landing-page/Footer";
 
-
-
-function Contacts( aosProps) {
-
-
-  
+function Contacts(aosProps) {
   return (
-    <div {...aosProps} >
+    <div {...aosProps}>
       <div>
         <Nav />
       </div>
 
-      <div className="bg-blue-400 p-10 ">
-        <p className=" text-white flex justify-center lg:justify-start font-bold text-3xl">Contacts</p>
+      <div className="bg-[#A855F7]  p-10 ">
+        <p className=" text-white max-w-[1200px] mx-auto flex justify-center lg:justify-start font-bold text-3xl">
+          Contacts
+        </p>
       </div>
       <div className="flex items-center justify-center mt-10">
-        <img src="/me.png" alt="" className="rounded-full w-30 h-30" />
+        <img
+          src="/meai.png"
+          alt=""
+          className="rounded-full w-40 h-40 md:w-54 md:h-54"
+        />
       </div>
 
       <div className="flex items-center justify-center  p-7">
@@ -33,7 +35,7 @@ function Contacts( aosProps) {
               You can also find me on the following channels
             </p>
 
-            <div className="flex items-center justify-center mt-4 gap-9">
+            <div className="flex items-center justify-center py-6 mt-4 gap-9">
               <a href="#">
                 <img src="/facebook.png" alt="" className="w-[40px] mt-1" />
               </a>
@@ -97,7 +99,7 @@ function Contacts( aosProps) {
                   className="mt-1 block w-full h-50 border border-gray-300 rounded-md p-3  "
                 />
 
-                <button className="py-3 px-4 w-full bg-blue-400 rounded-md mt-2 text-white font-semibold">
+                <button className="py-3 px-4 w-full bg-[#A855F7] rounded-md mt-2 text-white font-semibold">
                   Send It
                 </button>
               </div>
@@ -105,11 +107,9 @@ function Contacts( aosProps) {
           </div>
         </div>
 
-        <footer>
-          <p className="text-sm flex items-center justify-center bg-gray-500 text-gray-400 py-3">
-            @ 2025 Derick David
-          </p>
-        </footer>
+        <div>
+          <Footer />
+        </div>
       </section>
     </div>
   );

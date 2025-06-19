@@ -1,101 +1,42 @@
-import { FaCode, FaCheckCircle } from "react-icons/fa";
 
-function Hero( aosProps ) {
-  const skills = ["React", "JavaScript", "HTML", "CSS"];
-  const learningSkills = ["Python", "C++", "Java", "Node.js"];
+
+
+function Hero(aosProps) {
   return (
-    <div {...aosProps}className="max-w-[1400px] mx-auto ">
-      <div className="flex items-center justify-center flex-col lg:flex-row gap-15 px-5 py-5 bg-blue-400 text-white">
-        <div className="">
-          <img
-            src="/me.png"
-            alt=""
-            className=" mt-10 c w-[300px] h-[300px]"
-          />
-        </div>
+    <div className="bg-[#fafafa]">
+  <div data-aos="fade-down" data-aos-delay="100" className=" min-h-screen flex flex-col lg:flex-row items-center   max-w-[1000px] mx-auto">
+<div className=" text-center mx-auto space-y-6 px-3 pt-6 md:text-left md:pt-20">
+  <h2 className="text-2xl md:block flex items-center justify-center font-semibold text-[#1d1d1d] ">Hey, I'm DERICK</h2>
+  <h1 className="md:text-6xl text-4xl font-extrabold ">
+    <span className="text-[#A855F7]">Front</span>
+     <span className="text-[#1d1d1d] ">end</span> <br />
+      <span className="text-[#1d1d1d] ">Developer</span>
+  </h1>
 
-        <div className="text-center  lg:text-start">
-          <p className="text-2xl">Hello, My Name Is</p>
-          <p className="font-semibold text-4xl mt-2">Derick David</p>
-          <p className="mt-4">
-            I'm a frontend web developer, for complex scalable websites. I write{" "}
-            <br />
-            about web development on my blog and regularly speak at various web
-            conferences and meetups. <br /> Want to know how I may help your
-            project? Check out my <a className="hover:underline text-gray-500" href="/projects">project case</a>.
-          </p>
-          <button className="px-4 py-2 rounded text-white font-bold bg-indigo-500 hover:bg-indigo-700 transition mt-4">
-            <a href="/contact">Hire Me</a>
+  <p className="md:max-w-1/2 text-[#737373] text-base md:text-lg">I'm a frontend developer based in Nigeria, I'll help you build   beautiful websites your users will love.</p>
+
+<div className="flex gap-4">
+          <button className="bg-black text-white px-4 py-3 md:px-6 md:py-3 rounded-lg font-medium hover:bg-[#A855F7] transition duration-200">
+
+<a href="/contact"> Get In Touch
+</a>          </button>
+          <button className="bg-[#f4f4f5] text-black px-4 py-3 md:px-6 md:py-3 rounded-lg shadow-sm font-medium hover:bg-[#A855F7] transition duration-200">
+            <a href="/projects">Browse Projects</a>
           </button>
         </div>
-      </div>
 
-      <div className="mt-10 ">
-        <div className="flex justify-center items-center">
-          <p className="text-4xl text-gray-500 font-semibold ">
-            Skills Overview
-          </p>
-        </div>
-        <p className=" px-5 flex text-center lg:text-start items-center justify-center text-gray-500 mt-4">
-          I have more than 8 years' experience building rich web applications
-          for clients all over the world. Below is a <br />
-          quick overview of my main technical skill sets and tools I use. Want
-          to find out more about my experience?
-        </p>
-      </div>
+</div>
 
-      <div className="flex flex-col lg:flex-row items-center justify-center  gap-10 mt-15 ">
-        <div className=" bg-white shadow-md w-80 text-center rounded-lg p-6 hover:bg-blue-300/40 transition-transform hover:scale-105">
-          <div className=" flex items-center justify-center mb-10">
-            <div className="w-16 h-16 bg-blue-500 rounded-full flex items-center justify-center">
-              <FaCode className="text-white text-2xl" />
-            </div>
-          </div>
+<div className="mt-16">
+<div className="relative w-[270px] md:w-[450px] md:h-120 rounded-full border border-[#A855F7] p-4">
+  <img src="/meai.png" alt="" className="rounded-full object-cover w-[260px] md:w-full md:h-full grayscale"/>
+</div>
+</div>
 
-          <h2 className="text-3xl flex items-center justify-center text-gray-500 font-bold mb-4">
-            Frontend
-          </h2>
-          <div className="flex items-center justify-center">
-            <ul className="text-left  text-gray-500 space-y-3">
-              {skills.map((skill, index) => (
-                <li
-                  key={index}
-                  className="text-grey-800 flex items-center text-[20px]"
-                >
-                  <FaCheckCircle className=" mr-2 text-blue-500" />
-                  {skill}
-                </li>
-              ))}
-            </ul>
-          </div>
-        </div>
 
-        <div className=" bg-white shadow-md w-80 text-center rounded-lg p-6 hover:bg-blue-300/40 transition-transform hover:scale-105">
-          <div className=" flex items-center justify-center mb-10">
-            <div className="w-16 h-16 bg-blue-500 rounded-full flex items-center justify-center">
-              <FaCode className="text-white text-2xl" />
-            </div>
-          </div>
 
-          <h2 className="text-3xl flex items-center justify-center text-gray-500 font-bold mb-4">
-            Interested Skills
-          </h2>
-          <div className="flex items-center justify-center">
-            <ul className="text-left text-gray-500 space-y-3">
-              {learningSkills.map((learningSkills, index) => (
-                <li
-                  key={index}
-                  className="text-grey-800 flex items-center text-[20px]"
-                >
-                  <FaCheckCircle className=" mr-2 text-blue-500" />
-                  {learningSkills}
-                </li>
-              ))}
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
+  </div>
+  </div>
   );
 }
 

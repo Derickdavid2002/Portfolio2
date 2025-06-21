@@ -23,7 +23,6 @@ return (
       <Link to="/contact" onClick={() => handleClick("Contact")} className="px-2 py-1 block">CONTACT</Link>
       <Link to="/about" onClick={() => handleClick("About")} className="px-2 py-1 block">ABOUT</Link>
       <Link to="/projects" onClick={() => handleClick("Projects")} className="px-2 py-1 block">PROJECTS</Link>
-      {/* <Link to="/blogs" onClick={() => handleClick("Reviews")} className="px-2 py-1 block">BLOGS</Link> */}
     </div>
 
 

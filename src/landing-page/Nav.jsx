@@ -47,12 +47,14 @@ function Nav() {
 
   return (
     <div onMouseLeave={() => setHoveredItem(null)} className=" bg-gray-800 ">
-      <nav className="flex lg:gap- items-center p-3  py-6 text-white max-w-[1200px] mx-auto flex-col md:flex-row md:justify-between md:gap-[100px]">
+      <nav className="flex  items-center p-3  py-6 text-white max-w-[1200px] mx-auto flex-col md:flex-row md:justify-between md:gap-[100px]">
         <div
           data-aos="fade-down"
           data-aos-delay="100"
-          className="flex  items-center justify-between gap-30 "
+          className="flex  items-center justify-between gap-35 "
         >
+
+
           <div className="text-2xl flex justify-start font-bold">
             <span className="text-[#fafafa]">DER</span>
             <span className="text-[#A855F7]">ICK</span>
@@ -65,6 +67,10 @@ function Nav() {
               <RxHamburgerMenu />
             )}
           </div>
+
+
+
+
         </div>
 
         <div className="lg:text-white lg:text-[20px] lg:font-semibold relative hidden lg:block ">

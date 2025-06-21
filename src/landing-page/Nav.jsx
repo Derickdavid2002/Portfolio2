@@ -51,7 +51,7 @@ function Nav() {
         <div
           data-aos="fade-down"
           data-aos-delay="100"
-          className="flex  items-center justify-between gap-35 "
+          className="flex  items-center justify-between gap-45 "
         >
 
 

@@ -11,8 +11,8 @@ const Footer = () => {
       <div className="max-w-[1200px]  mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
 
         <div className="text-2xl font-bold">
-          <span className="text-[#fafafa]">DER</span>
-          <span className="text-[#A855F7]">ICK</span>
+        <a href="/">  <span className="text-[#fafafa]">DER</span>
+          <span className="text-[#A855F7]">ICK</span></a>
         </div>
 
         <div className="flex gap-6 text-sm font-medium">

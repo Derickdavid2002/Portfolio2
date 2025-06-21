@@ -15,7 +15,7 @@ function Hero(aosProps) {
 
   <p className="md:max-w-1/2 text-[#737373] text-base md:text-lg">I'm a frontend developer based in Nigeria, I'll help you build   beautiful websites your users will love.</p>
 
-<div className="flex items-center justify-center md:gap-4 md:block gap-4">
+<div className="flex items-center justify-center md:gap-5 md:justify-start gap-4">
           <button className="bg-black text-white px-4 py-3 md:px-6 md:py-3 rounded-lg font-medium hover:bg-[#A855F7] transition duration-200">
 
 <a href="/contact"> Get In Touch

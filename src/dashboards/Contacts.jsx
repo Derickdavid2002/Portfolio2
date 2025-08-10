@@ -39,14 +39,14 @@ function Contacts(aosProps) {
               <a href="#">
                 <img src="/facebook.png" alt="" className="w-[40px] mt-1" />
               </a>
-              <a href="#">
+              <a href="https://www.linkedin.com/in/derick-david-23b104377?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app">
                 <img
                   src="/linkedln.png"
                   alt=""
                   className="w-[30px] h-[24px] mt-2"
                 />
               </a>
-              <a href="#">
+              <a href="https://wa.me/2349071622937">
                 <img
                   src="/whatsapp.png"
                   alt=""

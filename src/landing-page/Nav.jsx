@@ -53,24 +53,14 @@ function Nav() {
           data-aos-delay="100"
           className="flex  items-center justify-between gap-45 "
         >
-
-
           <div className="text-2xl flex justify-start font-bold">
             <span className="text-[#fafafa]">DER</span>
             <span className="text-[#A855F7]">ICK</span>
           </div>
 
           <div className=" md:hidden    " onClick={() => setIsOpen(!isOpen)}>
-            {isOpen ? (
-              <TbLetterX  />
-            ) : (
-              <RxHamburgerMenu />
-            )}
+            {isOpen ? <TbLetterX /> : <RxHamburgerMenu />}
           </div>
-
-
-
-
         </div>
 
         <div className="lg:text-white lg:text-[20px] lg:font-semibold relative hidden lg:block ">
